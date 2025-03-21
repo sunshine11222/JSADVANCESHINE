@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript 1</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .result {
+            font-weight: bold;
+            margin-top: 10px;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>Javascript Web Output #1</h1>
+    <table>
+        <tr>
+            <td>
+                <label for="txtNum">Insert any Positive Numbers:</label>
+            </td>
+            <td>
+                <input type="text" id="txtNum">
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2">
+                <button id="btn1">Insert</button>
+                <button id="btn2">Clear</button>
+            </td>
+        </tr>
+    </table>
+    <br>
+    <fieldset>
+        <legend>Inserted Numbers</legend>
+        <table id="tblNumbers"></table>
+    </fieldset>
+
+    <button id="btn3" style="margin-top: 10px; display: none;">Clear Items</button>
+    <button id="btn4" style="margin-top: 10px; display: none;">Get Total</button>
+    <button id="btnHighLow" style="margin-top: 10px; display: none;">Get Highest and Lowest</button>
+    
+    <!-- Initially hide the "Sort by" label and select -->
+    <label id="sortLabel" style="display: none;">Sort by:
+        <select id="sortOption" onchange="sortNumbers()" style="display: none;">
+            <option value="">Please Select</option>
+            <option value="asc">Ascending</option>
+            <option value="desc">Descending</option>
+        </select>
+    </label>
+
+    <!-- This is where the highest and lowest values will be displayed -->
+    <div id="highLowResult" class="result" style="display: none;"></div>
+
+    <script src="main.js"></script>
+</body>
+</html>
